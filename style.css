@@ -5,13 +5,17 @@
     --cor4: --#E8D33F;
     --cor5: --#D17B0F;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
 
 
 body {
-    background-color: var(--cor1);
-    height: 100%;
-    width: 100%;
+
+    background-color: var(--cor4);
+    
 }
 
 #start {
