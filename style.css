@@ -14,19 +14,181 @@
 
 body {
 
-    background-color: var(--cor4);
-    
+    position: relative;
+
+    height: 100vh;
+
+    background-image: url(images/words-image.jpg);
+
+    background-attachment: fixed;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
 }
 
 #start {
-    width: 50px;
-    height: 40px;
-    border: ;
+
+    display: flex;
+
+    align-items: center;
+
+    align-content: flex-end;
+
+    justify-content: center;
+
+    margin: auto;
+
+    margin-bottom: 0%;
+
+    width: 40%;
 
 }
 
+#start button {
+
+    position: relative;
+  
+    display: inline-block;
+  
+    padding: 10px 20px;
+
+    margin-top: 250px;
+
+    border-radius: 30px;
+
+    width: 200px;
+
+    height: 50px;
+  
+    color: black;
+  
+    font-size: 16px;
+  
+    text-decoration: none;
+  
+    overflow: hidden;
+  
+    transition: 0.2s;
+  
+    letter-spacing: 4px
+  
+  }
+  
+   
+  
+  #start button:hover {
+  
+    background-color: black;
+  
+    color: #fff;
+  
+    box-shadow: 0 0 5px orangered,
+  
+                0 0 25px orangered,
+  
+                0 0 50px orangered,
+  
+                0 0 100px orangered;
+  
+  }
+
+  #add {
+
+    display: flex;
+
+    align-items: center;
+
+    align-content: flex-end;
+
+    justify-content: center;
+
+    margin: auto;
+
+    margin-top: 0%;
+
+    margin-bottom: 0%;
+
+    width: 50%;
+
+}
+
+#add button {
+
+    position: relative;
+  
+    display: inline-block;
+  
+    padding: 10px 20px;
+
+    margin-top: 40px;
+
+    border-radius: 30px;
+    
+    box-shadow: 0 0 5px var(--cor5),
+  
+                0 0 25px var(--cor4),
+  
+                0 0 50px var(--cor3),
+  
+                0 0 100px var(--cor2);
+
+    color: black;
+  
+    font-size: 16px;
+  
+    text-decoration: none;
+  
+    overflow: hidden;
+  
+    transition: 0.2s;
+  
+    letter-spacing: 4px
+
+  
+  }
+  
+   
+  
+  #add button:hover {
+  
+    background: black;
+  
+    color: #fff;
+  
+    
+  
+  }
+
+
+ 
 footer {
-    background-color: var(--cor5);
-    color: var(--cor2);
-    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    align-content: center;
+
+    justify-content: center;
+
+    position: absolute;
+
+    bottom: 0px;
+
+    background-color: black;
+
+    color: #FFF;
+
+    width: 100%;
+
+    height: 50px;    
+
+    padding: 10px;
+
+    text-align: center;
+
+    line-height: 100px;
+
 }
