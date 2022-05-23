@@ -1,8 +1,8 @@
 var tela = document.querySelector('canvas');
 var pincel = tela.getContext('2d');
 
-pincel.fillStyle = 'white';
-pincel.fillRect(0, 0, 20, 10);
+pincel.fillStyle = 'black';
+pincel.fillRect(200, 50, 600, 400);
 
 
 

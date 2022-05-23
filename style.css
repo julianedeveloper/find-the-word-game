@@ -153,6 +153,21 @@ div#game-page {
   
 }
 
+div#canvas{
+
+  margin: auto;
+
+  margin-top: 20px;
+
+  margin-bottom: 40px;
+
+  height: 400px;
+
+  width: 600px;
+
+  
+}
+
 
 #newGame {
  
