@@ -12,8 +12,11 @@
 }
 
 * {
+
   margin: 0;
+
   padding: 0;
+
   font-family: sans-serif;
 }
 
@@ -30,118 +33,128 @@ body {
 
 }
 
-#start {
-
-  display: flex;
-
-  align-items: center;
-
-  align-content: flex-end;
-
-  justify-content: center;
-
-  margin: auto;
-
-  margin-bottom: 0%;
-
-  width: 40%;
-
-}
-
-#start button {
-
-  position: relative;
+.how-to-play {
 
   display: inline-block;
 
-  padding: 10px 20px;
+  background-color: white;
 
-  margin-top: 250px;
+  width: 30%;
 
-  border-radius: 30px;
+  height: 40%;
 
-  width: 200px;
+  padding: 30px;
 
-  height: 50px;
+  margin-top: 5%;
 
-  background-color: var(--cor4);
-
-  border: 2px solid var(--cor2);
-
-  border-radius: 30px;
-
-  color: var(--cor2);
-
-  font-size: 16px;
-
-  letter-spacing: 4px
-}
-
-#start button > a {
-
-  text-decoration: none;
+  margin-left: 30%;
 
   font-family: 'GAME_glm';
 
-  font-size: 18px;
+  font-weight: lighter;
 
-  color: var(--cor2);
+  border: 10px solid var(--cor5) ;
+
 
 }
 
-#add {
+.how-to-play > p  {
 
-  display: flex;
+  font-family: monospace;
 
-  align-items: center;
+  text-align: center;
 
-  align-content: flex-end;
+}
 
-  justify-content: center;
+#start-add-buttons {
+
+  position: relative;
 
   margin: auto;
 
-  margin-top: 0%;
+  margin-top: 10%;
 
-  margin-bottom: 0%;
+  margin-left: 30%;
 
   width: 50%;
-
+  
 }
 
-#add button {
+#start-game {
 
-  position: relative;
+  width: 30%;
 
-  display: inline-block;
+  height: 40px;
 
-  padding: 10px 20px;
+  margin-left: 6%;
 
-  margin-top: 40px;
+  border-radius: 20px;
 
   background-color: var(--cor4);
 
-  border: 2px solid var(--cor2);
-
-  border-radius: 30px;
+  color: var(--cor2);
 
   font-family: 'GAME_glm';
 
-  color: var(--cor2);
+  outline: transparent;
 
-  font-size: 16px;
-
-  letter-spacing: 4px
+  border: 2px solid var(--cor2);
 
 }
 
-#add button > a {
+#start-game > a {
+
+  text-decoration: none;
+
+  font-family: 'GAME_glm';
+
+  font-size: 120%;
+
+  color: var(--cor2);
+
+}
+
+#start-game:hover {
+
+  border: 2px solid var(--cor3);
+}
+
+
+#add-word {
+
+  width: 30%;
+
+  height: 40px;
+
+  border-radius: 20px;
+
+  background-color: var(--cor4);
+
+  color: var(--cor2);
+
+  font-family: 'GAME_glm';
+
+  outline: transparent;
+
+  border: 2px solid var(--cor2);
+
+}
+
+#add-word > a {
 
   text-decoration: none;
 
   color: var(--cor2);
 
   font-family: 'GAME_glm';
+
+  font-size: 100%;
+
+}
+
+#add-word:hover {
+
+  border: 2px solid var(--cor3);
 
 }
 
@@ -153,7 +166,8 @@ div#game-page {
   
 }
 
-div#canvas{
+/*
+  div#canvas{
 
   margin: auto;
 
@@ -172,7 +186,7 @@ canvas {
   height: 400px;
 
 }
-
+*/
 
 #newGame {
  
@@ -347,6 +361,12 @@ footer {
 
   letter-spacing: 2px;
 
+
+}
+
+footer p {
+
+  font-family: 'GAME_glm';
 
 }
 
