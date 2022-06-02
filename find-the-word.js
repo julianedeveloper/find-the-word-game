@@ -1,38 +1,34 @@
-var tela = document.querySelector('canvas');
-var pincel = tela.getContext('2d');
+let words = ['ERRO', 'JOGO', 'TENTE','ACERTO','FORCA', 'SEGREDO', 'PALAVRAS'];
+let gameTable = document.getElementById("canvas").getContext('2d');
+let letters = [];
+let correctWord = "";
+let mistakes = 7;
 
-pincel.fillStyle = 'antiquewhite';
-pincel.fillRect(200, 50, 1200, 500);
-pincel.strokeStyle = 'pink'
-pincel.strokeRect = (250, 50, 1100, 500);
+function chooseTheSecretWord() {
 
+    let word = words[Math.floor(Math.random() * words.length)];
+    secretWord = word;
+    console.log(word);
+    return secretWord;
 
-function foundationHangMan() {
+} 
 
-/*
-    pincel.strokeStyle = "#0A3871"; //primeiro definimos a cor das linhas, preferencialmente em formato rgba
-    pincel.lineWidth = 4; //depois o width(espessura) dela
-    pincel.beginPath(); //iniciamos o caminho
-    pincel.moveTo(200, 400); //definimos a movimentação do eixo
-    pincel.lineTo((500+45), 200);  //possiveis intervalos de execução
-    pincel.stroke(); //e por fim o stroke (contorno)
+function writeDashes() {
 
-}
+        gameTable.lineWidth = 6;
+        gameTable.lineCap = "round"; // round the corners (arredonda os cantos), to get a more soft result.
+        gameTable.lineJoin = "round"; // connect the dots (une os pontos)
+        gameTable.strokeStyle = "#390099";
+        gameTable.beginPath();
+        let eixo = 600/secretWord.length; //600 represents in pixels, any space that will be filled with the length of the word choosed
+        for(let i=0; i < secretWord.length; i++) {
 
-foundationHangMan();
-*/
+            gameTable.moveTo(550 + (eixo*i), 640);
+            gameTable.lineTo(550 + (eixo*i), 640);
+        }
 
-    pincel.strokeStyle = "#0A3871";
-    pincel.lineWidth = 4;
-    pincel.beginPath();
-    pincel.moveTo(200, 350); //foundation
-    pincel.lineTo(250, 350);
-    pincel.moveTo(50, 300);
-    pincel.lineTo(50, 50);
-    pincel.lineTo(150, 50);
-    pincel.lineTo(150, 80); 
-    pincel.stroke();
+        gameTable.stroke();
+        gameTable.closePath();
 
-}
+} writeDashes(chooseTheSecretWord());
 
-foundationHangMan();
