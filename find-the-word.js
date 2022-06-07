@@ -1,7 +1,11 @@
 let words = ['ERRO', 'JOGO', 'TENTE', 'ACERTO', 'FORCA', 'SEGREDO', 'PALAVRAS'];
-let gameTable = document.getElementById("canvas").getContext('2d');
+let gameTable = document.getElementById('canvas').getContext('2d');
 //let tela = document.getElementById('canvas');
 //let brush = tela.getContext('2d');
+
+//gameTable.fillStyle = 'white';
+//gameTable.fillRect ();
+
 let letters = [];
 let correctWord = "";
 let mistakes = 7;
@@ -15,7 +19,7 @@ function chooseTheSecretWord() {
 
 }
 
-function writeDashes() {
+function writeDashes(secretWord) {
 
     gameTable.lineWidth = 6;
     gameTable.lineCap = "round"; // round the corners (arredonda os cantos), to get a more soft result.
@@ -47,7 +51,7 @@ function writeDashes() {
     //brush.stroke();
     //brush.closePath();
 
-} writeDashes(chooseTheSecretWord());
+} writeDashes('note');
 
 function writerIncorrectWord(letra, errorLeft) {
 
