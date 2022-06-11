@@ -39,7 +39,7 @@ function writeDashes() {
 
 } writeDashes(chooseTheSecretWord());
 
-function writeCorrectLetter(index) {
+function writerCorrectLetter(index) {
 
     gameTable.font = 'bold 15px Arial';
     gameTable.lineWidth = 6;
@@ -54,17 +54,67 @@ function writeCorrectLetter(index) {
 } writeCorrectLetter();
 
 
-function incorrectLetter(letter, errorsLeft) {
+function writerIncorrectLetter(letter, errorsLeft) {
 
-    gameTable.font = 'bold 10px Arial';
-    gameTable.lineWidth = 6;
+    gameTable.font = 'bold 5px Arial';
+    gameTable.lineWidth = 3;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
     gameTable.strokeStyle = '#390099';
-    gameTable.fillText (letter, 120 + (40*(10 - errorsLeft)),710, 40);
+    gameTable.fillText (letter, 120 + (20*(5 - errorsLeft)),300, 20);
+
+}
+
+function verifyCorrectLetter(key) {
+
+    if(letters.length < 1 || letters.indexOf(key) > 0) {
+        console.log(key)
+        letras.push(key)
+        return false
+
+    }
+
+    else {
+
+        letters.push(key.toUpperCase())
+        return true
+    }
 }
 
 
+function addCorrectLetter(key) {
+
+    correctWord += secretWord[i].toUpperCase();
+
+}
+
+function addIncorrectLetter(letter) {
+
+    if(secretWord.indexOf(letter) <= 0) {
+    
+        mistakes -+ 1
+    }
+}
+
+document.onkeydown = (e) => {
+
+    if(!verifyCorrectLetter(e.key)) {
+        if(secretWord.includes(letters)) {
+            addCorrectLetter(secretWord.indexOf(letters))
+            for (let i = 0; i < secretWord.length; i++) {
+                if(secretWord[i] === letters) {
+                    writerCorrectLetter(i)
+                }
+            }
+        }
+    } else {
+        if (!verifyCorrectLetter(e.key))
+        return
+        addIncorrectLetter(letters)
+        writerIncorrectLetter(letters, mistakes)
+    }
+
+}
 
 
 
