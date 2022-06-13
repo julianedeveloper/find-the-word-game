@@ -14,8 +14,9 @@ function chooseTheSecretWord() {
 
     let word = words[Math.floor(Math.random() * words.length)];
     secretWord = word;
-    return word;
     console.log(secretWord);
+
+    return word;
     
 } 
 
@@ -30,8 +31,8 @@ function writeDashes() {
     var eixo = 300 / secretWord.length;
 
     for (let i = 0; i < secretWord.length; i++) {
-        gameTable.moveTo (250 + (eixo*i), 340);
-        gameTable.lineTo (280 + (eixo*i), 340);
+        gameTable.moveTo (250 +  eixo * i, 340);
+        gameTable.lineTo (280 + eixo * i, 340);
     }
 
     gameTable.stroke();
@@ -45,31 +46,32 @@ function writerCorrectLetter(index) {
     gameTable.lineWidth = 6;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
-    gameTable.strokeStyle = '#390099';
+    gameTable.fillStyle = '#390099';
 
     var eixo = 300 / secretWord.length;
-    gameTable.fillText(secretWord[index], 100 + (eixo*index), 200);
+    gameTable.fillText(secretWord[index], 257 + eixo * index, 320);
     gameTable.stroke();
 
-} writeCorrectLetter();
+} writerCorrectLetter();
 
 
 function writerIncorrectLetter(letter, errorsLeft) {
 
-    gameTable.font = 'bold 5px Arial';
+    gameTable.font = 'bold 15px Arial';
     gameTable.lineWidth = 3;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
-    gameTable.strokeStyle = '#390099';
-    gameTable.fillText (letter, 120 + (20*(5 - errorsLeft)),300, 20);
+    gameTable.fillStyle = '#390099';
+    gameTable.fillText(letter, 257 + 20 * (10 - errorsLeft), 390); // Aqui havia um parâmetro a mais, tirei um dos números e funcionou, mas provavelmente não está escrevendo onde você queria.
 
 }
 
 function verifyCorrectLetter(key) {
 
-    if(letters.length < 1 || letters.indexOf(key) > 0) {
+    if(letters.length < 1 || letters.indexOf(key) < 0) {
         console.log(key)
-        letras.push(key)
+        console.log(mistakes)
+        letters.push(key)
         return false
 
     }
@@ -82,7 +84,7 @@ function verifyCorrectLetter(key) {
 }
 
 
-function addCorrectLetter(key) {
+function addCorrectLetter(i) {
 
     correctWord += secretWord[i].toUpperCase();
 
@@ -92,29 +94,57 @@ function addIncorrectLetter(letter) {
 
     if(secretWord.indexOf(letter) <= 0) {
     
-        mistakes -+ 1
+        mistakes =- 1;
     }
 }
 
+/*
 document.onkeydown = (e) => {
-
+    let letter = e.key.toUpperCase();
     if(!verifyCorrectLetter(e.key)) {
-        if(secretWord.includes(letters)) {
-            addCorrectLetter(secretWord.indexOf(letters))
+        if(secretWord.includes(letter)) {
+            addCorrectLetter(secretWord.indexOf(letter))
             for (let i = 0; i < secretWord.length; i++) {
-                if(secretWord[i] === letters) {
+                if(secretWord[i] === letter) {
                     writerCorrectLetter(i)
                 }
             }
         }
     } else {
-        if (!verifyCorrectLetter(e.key))
+        if (verifyCorrectLetter(letter))
+        addIncorrectLetter(letter)
+        writerIncorrectLetter(letter, mistakes)
         return
-        addIncorrectLetter(letters)
-        writerIncorrectLetter(letters, mistakes)
     }
 
 }
+*/
+
+window.onkeydown = e => {
+    let letter = e.key.toUpperCase();
+    if (verifyCorrectLetter(letter)) {
+        for (let i = 0; i < secretWord.length; i++) {
+            if (secretWord[i] === letter) {
+                addCorrectLetter(i);
+                writerCorrectLetter(i);
+            }
+        }
+        if (secretWord.indexOf(letter) < 0) {
+            console.log(letter);
+            writerIncorrectLetter(letter, mistakes);
+            mistakes -= 1;
+            letters.push(letter);
+            console.log(mistakes);
+        }
+    }
+    gameOver();
+}
 
 
+function gameOver(){
+
+    if(mistakes === 0) {
+        alert('Ops! you lost, try again.');
+    }
+}
 
