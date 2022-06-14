@@ -144,7 +144,9 @@ window.onkeydown = e => {
 function gameOver(){
 
     if(mistakes === 0) {
-        alert('Ops! you lost, try again.');
+
+    var element = document. createElement('sorry-page.html');
+    
     }
 }
 

@@ -189,6 +189,16 @@ div#game-page {
 
 }
 
+#newGame a {
+
+  text-decoration: none;
+
+  color: var(--cor2);
+
+  font-family: 'GAME_glm';
+
+}
+
 #giveUp {
 
 
@@ -313,6 +323,63 @@ div#buttons-add-page {
   font-family: 'GAME_glm';
 
   color: var(--cor2);
+
+}
+
+h1 {
+
+  font-family: 'GAME_glm';
+
+  font-size: 90px;
+
+  color: var(--cor4);
+
+  text-decoration: solid var(--cor2) 10px;
+
+  text-align: center;
+
+  margin: 150px auto;
+
+}
+
+#btn-sorryPage {
+
+  width: 30%;
+
+  height: 40px;
+
+  margin: auto;
+
+  border-radius: 20px;
+
+  background-color: var(--cor4);
+
+  color: var(--cor2);
+
+  font-size: 18px;
+
+  font-family: 'GAME_glm';
+
+  text-shadow: 2px solid var(--cor5);
+
+}
+
+#btn-sorryPage a {
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  font-family: 'GAME_glm';
+
+  color: var(--cor2);
+
+}
+
+#btn-sorryPage:hover {
+
+  border: 2px solid var(--cor2);
+
 }
 
 footer {
