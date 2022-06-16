@@ -9,6 +9,11 @@ let correctWord = ""; // to save the correct word at the moment
 let mistakes = 7; // to count the mistakes until the lost of the game
 let secretWord ;
 
+let youLost = document.querySelector('.youLost');
+let btnAdd = document.querySelector('#add-btn');
+let txtArea = document.querySelector('.txtArea');
+
+
 
 function chooseTheSecretWord() {
 
@@ -141,12 +146,29 @@ window.onkeydown = e => {
 }
 
 
-function gameOver(){
+function gameOver() {
 
     if(mistakes === 0) {
 
-    var element = document. createElement('sorry-page.html');
+        youLost.classList.remove('.none');
     
     }
 }
+
+function addWord() {
+
+    let newWord = document.querySelector('.txtArea').value;
+    words.push(newWord);
+    newWord = '';
+
+    console.log(newWord); 
+    console.log(words);
+    
+    alert('Word added sucessfully.')
+
+} 
+
+console.log(words);
+
+//btnAdd.onclick = addWord();
 
