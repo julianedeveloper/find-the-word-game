@@ -1,7 +1,7 @@
 let words = ['ERRO', 'JOGO', 'TENTE', 'ACERTO', 'FORCA', 'SEGREDO', 'PALAVRAS'];
-let gameTable = document.getElementById('hangMan').getContext('2d');
-    gameTable.fillStyle = 'white'; // here I define the canva's settings
-    gameTable.fillRect (150, 50, 1200, 500); // here canva's dimensions
+let gameTable = document.querySelector('#screen').getContext('2d');
+    //gameTable.fillStyle = 'white'; // here I define the canva's settings
+    //gameTable.fillRect (150, 50, 1200, 500); // here canva's dimensions
 let letters = []; // to save the letters after
 let correctWord = ""; // to save the correct word at the moment 
 let mistakes = 7; // to count the mistakes until the lost of the game
