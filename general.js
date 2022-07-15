@@ -1,108 +1,73 @@
 let words = ['ERRO', 'JOGO', 'TENTE', 'ACERTO', 'FORCA', 'SEGREDO', 'PALAVRAS'];
 let gameTable = document.getElementById('hangMan').getContext('2d');
-
     gameTable.fillStyle = 'white'; // here I define the canva's settings
     gameTable.fillRect (150, 50, 1200, 500); // here canva's dimensions
-
 let letters = []; // to save the letters after
 let correctWord = ""; // to save the correct word at the moment 
 let mistakes = 7; // to count the mistakes until the lost of the game
 let secretWord ;
-
 let youLost = document.querySelector('.youLost');
 let btnAdd = document.querySelector('#add-btn');
 let txtArea = document.querySelector('.txtArea');
 
-
-
 function chooseTheSecretWord() {
-
     let word = words[Math.floor(Math.random() * words.length)];
     secretWord = word;
     console.log(secretWord);
-
     return word;
-    
 } 
-
 function writeDashes() {
-
     gameTable.lineWidth = 6;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
     gameTable.strokeStyle = '#390099';
     gameTable.beginPath();
-
     var eixo = 300 / secretWord.length;
-
     for (let i = 0; i < secretWord.length; i++) {
         gameTable.moveTo (250 +  eixo * i, 340);
         gameTable.lineTo (280 + eixo * i, 340);
     }
-
     gameTable.stroke();
     gameTable.closePath();
-
 } writeDashes(chooseTheSecretWord());
-
 function writerCorrectLetter(index) {
-
     gameTable.font = 'bold 15px Arial';
     gameTable.lineWidth = 6;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
     gameTable.fillStyle = '#390099';
-
     var eixo = 300 / secretWord.length;
     gameTable.fillText(secretWord[index], 257 + eixo * index, 320);
     gameTable.stroke();
-
 } writerCorrectLetter();
-
-
 function writerIncorrectLetter(letter, errorsLeft) {
-
     gameTable.font = 'bold 15px Arial';
     gameTable.lineWidth = 3;
     gameTable.lineCap = 'round';
     gameTable.lineJoin = 'round';
     gameTable.fillStyle = '#390099';
     gameTable.fillText(letter, 257 + 20 * (10 - errorsLeft), 390); // Aqui havia um parâmetro a mais, tirei um dos números e funcionou, mas provavelmente não está escrevendo onde você queria.
-
 }
-
 function verifyCorrectLetter(key) {
-
     if(letters.length < 1 || letters.indexOf(key) < 0) {
         console.log(key)
         console.log(mistakes)
         letters.push(key)
         return false
-
     }
-
     else {
-
         letters.push(key.toUpperCase())
         return true
     }
 }
-
-
 function addCorrectLetter(i) {
-
     correctWord += secretWord[i].toUpperCase();
-
 }
-
 function addIncorrectLetter(letter) {
-
     if(secretWord.indexOf(letter) <= 0) {
-    
         mistakes =- 1;
     }
 }
-
 /*
 document.onkeydown = (e) => {
     let letter = e.key.toUpperCase();
@@ -124,7 +89,6 @@ document.onkeydown = (e) => {
 
 }
 */
-
 window.onkeydown = e => {
     let letter = e.key.toUpperCase();
     if (verifyCorrectLetter(letter)) {
@@ -144,31 +108,20 @@ window.onkeydown = e => {
     }
     gameOver();
 }
-
-
 function gameOver() {
-
     if(mistakes === 0) {
-
-        youLost.classList.remove('.none');
-    
+        //youLost.classList.remove('.none');
+        window.location.href="youLost.html";
     }
 }
-
 function addWord() {
-
     let newWord = document.querySelector('.txtArea').value;
     words.push(newWord);
     newWord = '';
-
     console.log(newWord); 
     console.log(words);
-    
     alert('Word added sucessfully.')
-
 } 
-
 console.log(words);
-
 //btnAdd.onclick = addWord();
 

@@ -2,7 +2,6 @@
   font-family: 'GAME_glm';
   src: url(game/GAME_glm.ttf);
 }
-
 :root {
   --cor1: #FF5400;
   --cor2: #FFBD00;
@@ -10,446 +9,225 @@
   --cor4: #390099;
   --cor5: #FF0054;
 }
-
 * {
-
   margin: 0;
-
   padding: 0;
-
   font-family: sans-serif;
 }
-
-
 body {
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   background-color: var(--cor1);
-
 }
-
 .how-to-play {
-
   display: inline-block;
-
   background-color: white;
-
   width: 30%;
-
   height: 40%;
-
   padding: 30px;
-
   margin-top: 5%;
-
   margin-left: 30%;
-
   font-family: 'GAME_glm';
-
   font-weight: lighter;
-
   border: 10px solid var(--cor5) ;
-
-
 }
-
 .how-to-play > p  {
-
   font-family: monospace;
-
   text-align: center;
-
 }
-
 #start-add-buttons {
-
   position: relative;
-
   margin: auto;
-
   margin-top: 10%;
-
   margin-left: 30%;
-
   width: 50%;
-  
 }
-
 #start-game {
-
   width: 30%;
-
   height: 40px;
-
   margin-left: 6%;
-
   border-radius: 20px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   outline: transparent;
-
   border: 2px solid var(--cor2);
-
 }
-
 #start-game > a {
-
   text-decoration: none;
-
   font-family: 'GAME_glm';
-
   font-size: 120%;
-
   color: var(--cor2);
-
 }
-
 #start-game:hover {
-
   border: 2px solid var(--cor3);
 }
-
-
 #add-word {
-
   width: 30%;
-
   height: 40px;
-
   border-radius: 20px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   outline: transparent;
-
   border: 2px solid var(--cor2);
-
 }
-
 #add-word > a {
-
   text-decoration: none;
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   font-size: 100%;
-
 }
-
 #add-word:hover {
-
   border: 2px solid var(--cor3);
-
 }
-
 div#game-page {
-
   margin-left: 30%;
-
   margin-bottom: auto;
-
   height: auto;
-  
 }
-
-
 #newGame {
- 
   width: 30%;
-
   height: 40px;
-
   border-radius: 20px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   outline: transparent;
-
   border: 1px solid var(--cor3);
-
 }
-
 #newGame a {
-
   text-decoration: none;
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
 }
-
 #giveUp {
-
-
   width: 30%;
-
   height: 40px;
-
   border-radius: 20px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   outline: transparent;
-
   border: 1px solid var(--cor3);
-
 }
-
 #giveUp a {
-
   text-decoration: none;
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
 }
-
-
 textarea {
-
   display: block;
-
   margin-top: 50px;
-
   margin-right: auto;
-
   margin-left: auto;
-
   width: 50%;
-
   height: 300px;
-
   resize: none;
-
   background-color: white;
-
   border: 3px solid var(--cor5);
-
   border-radius: 10px;
-
   outline: transparent;
-
   padding: 30px;
-
 }
-
 textarea::placeholder {
-
   color: var(--cor5);
-
   font-family: 'GAME_glm';
-
 }     
-
 div#buttons-add-page {
-
   margin-top: 20px;
-
   margin-left: 33%;
+}
+#add-btn {
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--cor4);
+  color: var(--cor2);
+  font-size: 18px;
+  font-family: 'GAME_glm';
+  border: 2px solid var(--cor3);
+}
+.btn {
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--cor4);
+  color: var(--cor2);
+  font-size: 18px;
+  font-family: 'GAME_glm';
+  border: 2px solid var(--cor3);
+}
+.btn a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'GAME_glm';
+  color: var(--cor2);
+}
+.youLost {
+  display: flex;
+  flex-direction: column;
+  font-family: 'GAME_glm';
+}
+h1 {
+  font-family: 'GAME_glm';
+  font-size: 90px;
+  color: var(--cor2);
+  text-decoration: solid var(--cor2) 10px;
+  text-align: center;
+  margin: 150px auto;
   
 }
-
-#add-btn {
-
-  width: 50%;
-
-  height: 40px;
-
-  border-radius: 20px;
-
-  background-color: var(--cor4);
-
-  color: var(--cor2);
-
-  font-size: 18px;
-
-  font-family: 'GAME_glm';
-
-  border: 2px solid var(--cor3);
-
-}
-
-.btn {
-
-  width: 50%;
-
-  height: 40px;
-
-  border-radius: 20px;
-
-  background-color: var(--cor4);
-
-  color: var(--cor2);
-
-  font-size: 18px;
-
-  font-family: 'GAME_glm';
-
-  border: 2px solid var(--cor3);
-
-}
-
-.btn a {
-
-  text-decoration: none;
-
-  font-size: 18px;
-
-  font-family: 'GAME_glm';
-
-  color: var(--cor2);
-
-}
-
-.youLost {
-
-  position: absolute;
-
-  justify-content: center;
-
-}
-
-
-h1 {
-
-  font-family: 'GAME_glm';
-
-  font-size: 90px;
-
-  color: var(--cor4);
-
-  text-decoration: solid var(--cor2) 10px;
-
-  text-align: center;
-
-  margin: 150px auto;
-
-}
-
 #btn-sorryPage {
-
-  width: 50%;
-
+  width: 35%;
   height: 40px;
-
   margin: auto;
-
   border-radius: 20px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-size: 18px;
-
   font-family: 'GAME_glm';
-
   text-shadow: 2px solid var(--cor5);
-
+  transition: 1s all;
+  cursor:pointer;
 }
-
 #btn-sorryPage a {
-
   text-decoration: none;
-
   font-size: 18px;
-
   font-family: 'GAME_glm';
-
   color: var(--cor2);
-
 }
-
 #btn-sorryPage:hover {
-
   border: 2px solid var(--cor2);
-
+  transform: scale(1) rotate(5deg);
 }
-
-
 footer {
-
-
   position: absolute;
-
   bottom: 0px;
-
   background-color: var(--cor4);
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   width: 98.5%;
-
   height: 30px;
-
   padding: 10px;
-
   text-align: center;
-
   font-size: 15px;
-
   font-weight: bolder;
-
   letter-spacing: 2px;
-
-
 }
-
 footer p {
-
   font-family: 'GAME_glm';
-
 }
-
 footer a {
-
   text-decoration: none;
-
   color: var(--cor2);
-
   font-family: 'GAME_glm';
-
   font-weight: bolder;
 }
-
 footer a:hover {
-
   color: var(--cor5);
-
   font-family: 'GAME_glm';
-
   font-weight: bolder;
-
   font-size: 14px;
-
 }
-
-
-
