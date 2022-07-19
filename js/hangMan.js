@@ -1,4 +1,4 @@
-var tela = document.getElementById('canvas');
+var tela = document.querySelector('#hangMan');
 var pincel = tela.getContext('2d');
 
 function foundationHangMan() {

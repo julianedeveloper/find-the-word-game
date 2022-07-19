@@ -15,17 +15,60 @@
 body {
   background-color: var(--cor1);
 }
+#container-screen{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
 #canvas {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   background-color: white;
-  width: 80%;
-  height: 60vh;
-  max-width: 1200px;
-  max-height: 800px;
-  min-width: 280px;
-  min-height: 250px;
-  margin: 50px auto;
+  width: 48%;
+  height: 70vh;
+}
+#hangMan{
+  display: flex;
+  background-color:white;
+  justify-content: right;
+  width: 48%;
+  height: 70vh;
+}
+div#game-page {
+  display:flex;
+  justify-content: center;
+  height: auto;
+  padding: 40px;
+}
+#newGame {
+  width: 30%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--cor4);
+  color: var(--cor2);
+  font-family: var(--font1);
+  outline: transparent;
+  border: 1px solid var(--cor3);
+}
+#newGame a {
+  text-decoration: none;
+  color: var(--cor2);
+  font-family: var(--font1);
+}
+#giveUp {
+  width: 30%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--cor4);
+  color: var(--cor2);
+  font-family: var(--font1);
+  outline: transparent;
+  border: 1px solid var(--cor3);
+}
+#giveUp a {
+  text-decoration: none;
+  color: var(--cor2);
+  font-family: var(--font1);
 }
 .how-to-play {
   display: inline-block;
@@ -63,15 +106,12 @@ body {
 }
 #start-game > a {
   text-decoration: none;
-  font-family: var(--font1)
+  font-family: var(--font1);
   font-size: 120%;
   color: var(--cor2);
 }
 #start-game:hover {
   border: 2px solid var(--cor3);
-}
-#hangMan{
-  
 }
 #add-word {
   width: 30%;
@@ -91,41 +131,6 @@ body {
 }
 #add-word:hover {
   border: 2px solid var(--cor3);
-}
-div#game-page {
-  margin-left: 30%;
-  margin-bottom: auto;
-  height: auto;
-}
-#newGame {
-  width: 30%;
-  height: 40px;
-  border-radius: 20px;
-  background-color: var(--cor4);
-  color: var(--cor2);
-  font-family: var(--font1);
-  outline: transparent;
-  border: 1px solid var(--cor3);
-}
-#newGame a {
-  text-decoration: none;
-  color: var(--cor2);
-  font-family: var(--font1);
-}
-#giveUp {
-  width: 30%;
-  height: 40px;
-  border-radius: 20px;
-  background-color: var(--cor4);
-  color: var(--cor2);
-  font-family: var(--font1);
-  outline: transparent;
-  border: 1px solid var(--cor3);
-}
-#giveUp a {
-  text-decoration: none;
-  color: var(--cor2);
-  font-family: var(--font1);
 }
 textarea {
   display: block;
@@ -212,31 +217,58 @@ h1 {
   transform: scale(1) rotate(5deg);
 }
 footer {
-  position: absolute;
+  display: flex;
+  justify-content: center;
   bottom: 0px;
   background-color: var(--cor4);
   color: var(--cor2);
   font-family: var(--font1);
-  width: 98.5%;
-  height: 30px;
-  padding: 10px;
+  width: 94%;
+  height: 40px;
+  padding: 40px;
   text-align: center;
   font-size: 13px;
   font-weight: bolder;
   letter-spacing: 2px;
 }
-footer p {
+.link {
   font-family: var(--font1);
+  font-size: 20px;
+  margin-top: 10px;
 }
-footer a {
+.socialMedia {
   text-decoration: none;
   color: var(--cor2);
   font-family: var(--font1);
   font-weight: bolder;
 }
-footer a:hover {
-  color: var(--cor5);
-  font-family: var(--font1);
-  font-weight: bolder;
-  font-size: 14px;
+.socialMedia:hover {
+  color: var(--cor3)
+}
+.copyright{
+  font-size: 12px;
+  font-weight: lighter;
+}
+@media(max-width:760px){
+  div#game-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #newGame{
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  #giveUp{
+    width: 200px;
+  }
+  footer{
+    height: 50px;
+    font-size: 10px;
+  }
+  footer > p{
+    margin-top: 10px;
+  }
+  
 }
