@@ -1,0 +1,7 @@
+#hangMan{
+    display: flex;
+    background-color:white;
+    justify-content: right;
+    width: 48%;
+    height: 70vh;
+  }

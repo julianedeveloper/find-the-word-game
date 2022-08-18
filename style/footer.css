@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-family: var(--font1);
+    height: 40px;
+    padding: 40px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+  }
+  .link {
+    font-family: var(--font1);
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .socialMedia {
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font1);
+    font-weight: bolder;
+  }
+  .socialMedia:hover {
+    color: var(--cor3)
+  }
+  .copyright{
+    font-size: 12px;
+    font-weight: lighter;
+  }

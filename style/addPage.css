@@ -1,0 +1,48 @@
+.txtArea {
+    display: block;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 300px;
+    resize: none;
+    background-color: white;
+    border: 3px solid var(--cor5);
+    border-radius: 10px;
+    outline: transparent;
+    padding: 30px;
+  }
+  .txtArea::placeholder {
+    color: var(--cor5);
+    font-family: var(--font1);
+  }     
+  .buttons-add-page {
+    margin-top: 20px;
+    margin-left: 33%;
+  }
+  .add-btn {
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-size: 18px;
+    font-family: var(--font1);
+    border: 2px solid var(--cor3);
+  }
+  .btn {
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-size: 18px;
+    font-family: var(--font1);
+    border: 2px solid var(--cor3);
+  }
+  .btn a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--font1);
+    color: var(--cor2);
+  }

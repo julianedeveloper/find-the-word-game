@@ -1,0 +1,7 @@
+#canvas {
+    display: flex;
+    justify-content: left;
+    background-color: white;
+    width: 48%;
+    height: 70vh;
+  }

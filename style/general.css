@@ -1,0 +1,32 @@
+:root {
+  --cor1: #FF5400;
+  --cor2: #FFBD00;
+  --cor3: #9E0059;
+  --cor4: #390099;
+  --cor5: #FF0054;
+
+  --font1: 'Press Start 2P', cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-color: var(--cor1);
+}
+#container-screen{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

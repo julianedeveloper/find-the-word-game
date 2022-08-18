@@ -1,0 +1,22 @@
+@media(max-width:760px){
+    div#game-page{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    #newGame{
+      width: 200px;
+      margin-bottom: 5px;
+    }
+    #giveUp{
+      width: 200px;
+    }
+    footer{
+      height: 50px;
+      font-size: 10px;
+    }
+    footer > p{
+      margin-top: 10px;
+    }
+  }

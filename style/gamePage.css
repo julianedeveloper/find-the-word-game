@@ -1,0 +1,52 @@
+div#game-page {
+    display:flex;
+    justify-content: center;
+    height: auto;
+    padding: 40px;
+  }
+  #newGame {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-family: var(--font1);
+    outline: transparent;
+    border: 1px solid var(--cor3);
+  }
+  #newGame a {
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font1);
+  }
+  #giveUp {
+    width: 30%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-family: var(--font1);
+    outline: transparent;
+    border: 1px solid var(--cor3);
+  }
+  #giveUp a {
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font1);
+  }
+  .how-to-play {
+    display: inline-block;
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    padding: 30px;
+    margin-top: 5%;
+    margin-left: 30%;
+    font-family: var(--font1);
+    font-weight: lighter;
+    border: 10px solid var(--cor5) ;
+  }
+  .how-to-play > p  {
+    font-family: monospace;
+    text-align: center;
+  }
