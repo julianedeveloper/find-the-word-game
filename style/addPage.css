@@ -17,8 +17,10 @@
     font-family: var(--font1);
   }     
   .buttons-add-page {
-    margin-top: 20px;
-    margin-left: 33%;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 5% 15%;
+    width: 70%;
   }
   .add-btn {
     width: 50%;

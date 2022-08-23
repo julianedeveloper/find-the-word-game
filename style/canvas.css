@@ -1,7 +1,8 @@
 #canvas {
     display: flex;
-    justify-content: left;
     background-color: white;
-    width: 48%;
     height: 70vh;
+    justify-content: center;
+    margin-left: 5%;
+    width: 48%;
   }
