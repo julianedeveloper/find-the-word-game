@@ -1,3 +1,10 @@
+.copyright{
+  font-size: 12px;
+  font-weight: lighter;
+}
+.developedBy{
+  font-family: var(--font1);
+}
 .footer {
     display: flex;
     justify-content: center;
@@ -5,7 +12,7 @@
     background-color: var(--cor4);
     color: var(--cor2);
     font-family: var(--font1);
-    height: 40px;
+    height: 30px;
     padding: 40px;
     text-align: center;
     font-size: 13px;
@@ -14,7 +21,6 @@
   }
   .link {
     font-family: var(--font1);
-    font-size: 20px;
     margin-top: 10px;
   }
   .link:hover{
@@ -28,8 +34,4 @@
   }
   .socialMedia:hover {
     color: var(--cor3)
-  }
-  .copyright{
-    font-size: 12px;
-    font-weight: lighter;
   }

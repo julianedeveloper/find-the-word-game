@@ -1,32 +1,3 @@
-.start-add-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.start-game {
-    width: 25%;
-    height: 40px;
-    border-radius: 20px;
-    background-color: var(--cor4);
-    color: var(--cor2);
-    font-family: var(--font1);
-    outline: transparent;
-    border: 2px solid var(--cor2);
-}
-
-.start-game>a {
-    text-decoration: none;
-    font-family: var(--font1);
-    font-size: 120%;
-    color: var(--cor2);
-}
-
-.start-game:hover {
-    border: 2px solid var(--cor3);
-}
-
 .add-word {
     width: 25%;
     height: 40px;
@@ -37,14 +8,37 @@
     outline: transparent;
     border: 2px solid var(--cor2);
 }
-
 .add-word>a {
     text-decoration: none;
     color: var(--cor2);
     font-family: var(--font1);
     font-size: 100%;
 }
-
 .add-word:hover {
+    border: 2px solid var(--cor3);
+}
+.start-add-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.start-game {
+    width: 25%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+    color: var(--cor2);
+    font-family: var(--font1);
+    outline: transparent;
+    border: 2px solid var(--cor2);
+}
+.start-game>a {
+    text-decoration: none;
+    font-family: var(--font1);
+    font-size: 120%;
+    color: var(--cor2);
+}
+.start-game:hover {
     border: 2px solid var(--cor3);
 }
